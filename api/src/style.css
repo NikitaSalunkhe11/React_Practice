@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Main{
+    display: grid;
+    grid-template-columns: 335px 335px 335px 335px 335px;
+    padding: auto 20px;
+}
+.Product1{
+    height: 300px;
+    padding: 20px;
+    box-shadow: 2px 2px 20px rgb(10, 10, 79);
+    justify-content: space-evenly;
+    margin: 20px;
+}
+h3{
+    color: rgb(20, 20, 120);
+}
+.ProductImage{
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+.price{
+    color: rgb(128, 16, 16);
+    font-size: 20px;
+}
