@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react"; 
+import { createContext, useEffect, useState } from "react"; 
+import Product from "./product";
 
+export const myProductContext = createContext(null);
 
 function App(){
-
   const url="https://fakestoreapi.com/products";
 
   const [data, setData]=useState([]);
@@ -17,22 +18,12 @@ function App(){
     fetchapi();
   },[]);
 
-  return(
+  return( 
+    <myProductContext.Provider value={data}>
     <div>
-      <h1 style={{textAlign:"center"}}>Products</h1>
-      <div className="Main">
-        {data.map((item)=>(
-          <div key={item.id} className="Product1">
-            <h3>{item.title}</h3>
-            <img src={item.image} className="ProductImage"></img>
-            <p>{item.category}</p>
-            <p className="price">Rs. {item.price}</p>
-            <p style={{fontSize:"18px"}}> Rating: <span style={{fontSize:"18px", fontWeight:"bold"}}>{item.rating.rate}</span></p>
-            <p>count:{item.rating.count}</p>
-          </div>
-        ))}
-      </div>
+      <Product></Product>
     </div>
+    </myProductContext.Provider>
   );
 }
 export default App;

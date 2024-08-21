@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(136, 186, 243);
+    position: absolute;
+     
+}
+.heading{
+    color: blue;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.OuterDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+.Formdiv{
+    height: 400px;
+    width: 500px;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 1px 1px 10px rgb(28, 96, 156);
+    padding: 20px;
+    background-color: white;
+    
+}
+#male,
+#female,
+#other{
+    height: 15px;
+    width: 15px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+.btnclass{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    padding: 7px;
+    color: white;
+    background-color: rgb(78, 78, 226);
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+.btn:hover{
+    box-shadow: 2px 2px 10px rgb(168, 168, 244);
+    transform: scale(0.95);
+}
+.label{
+    font-size: 17px;
+    font-weight: 400;
+}
+.input{
+    height: 30px;
+    width: 300px;
+    padding: 10px;
+}
