@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.loginouter{
+    height: 700px;
+    width: 100%;
+    background-image: url('./login1.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.input1{
+    background-color: rgba(255, 255, 255, 0.589);
+    border: none;
+    height: 35px;
+    width: 250px;
+    color: black;
+    border-radius: 6px;
+    font-size: 15px;
+    padding-left: 10px;
+    box-shadow: 2px 2px 10px rgb(25, 52, 161),
+                -2px -2px 10px rgb(234, 132, 205)
+}
+.loginbox{
+    margin: auto auto;
+    padding-top:30px ;
+    height: 350px;
+    width: 400px;
+    background-color: rgba(166, 228, 246, 0.304);
+    align-items: center;
+    justify-items: center;
+    align-items: center;
+    justify-self: center;
+    text-align:center ;
+    box-shadow: inset 2px 2px 10px rgb(191, 227, 235),
+                    -2px 2px 10px rgb(235, 183, 220);
+}
+.button{
+    padding: 10px 30px 10px 30px;
+    margin-top:30px ;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.589);
+    box-shadow: 2px 2px 10px rgb(4, 9, 33);
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+}

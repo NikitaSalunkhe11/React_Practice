@@ -1,29 +1,49 @@
-import { createContext, useEffect, useState } from "react"; 
+import { useEffect, useState } from "react"; 
 import Product from "./product";
+import Cardgetdata from "./redux/Cardgetdata";
+import Pages from "./Pages";
 
-export const myProductContext = createContext(null);
+
+
+// export const myProductContext = createContext(null);
 
 function App(){
+
   const url="https://fakestoreapi.com/products";
 
-  const [data, setData]=useState([]);
+  const [currentpage, setcurrentpage] = useState(1);
+  const [productData, setProductData] = useState([]);
+
+  let productPerPage = 4;
+
+  let totalPages = productData.length / productPerPage;
+
+  let lastIndex = productPerPage * currentpage;
+  
+  let firstIndex = lastIndex - productPerPage;
+
+  let filterData = productData.slice(firstIndex,lastIndex);
+
+  console.log({currentpage, firstIndex, lastIndex});
 
   useEffect(()=>{
     async function fetchapi(){
       const response= await fetch(url);
       const data= await response.json();
-      setData(data);
+      setProductData(data); 
       console.log(data);
     }
     fetchapi();
   },[]);
 
   return( 
-    <myProductContext.Provider value={data}>
+    // <myProductContext.Provider value={data}>
     <div>
-      <Product></Product>
+      <Product productData={filterData}></Product>
+        <Pages totalPages={totalPages} setcurrentpage={setcurrentpage}></Pages>
+      <Cardgetdata></Cardgetdata>
     </div>
-    </myProductContext.Provider>
+    // </myProductContext.Provider>
   );
 }
 export default App;

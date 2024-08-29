@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    height: 80px;
+    /* background-color: rgb(111, 161, 232); */
+    width: 100%;
+}
+
+.namediv{
+    margin-top: 10px;
+    padding-left: 50px;
+    color: rgb(77, 35, 87);
+    text-shadow: 10px 10px 20px rgb(168, 67, 146);
+    font-size: 50px;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.searchbar{
+    margin: 1% 0% 0% 15%;
+    height: 40px;
+}
+.inputdiv{
+    width: 400px;
+    height: 50px;
+}
+.inputval{
+    height: 40px;
+    width: 100%;
+    border-radius: 30px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    margin-top: 8px;
+    color: black;
+}
+.searchbar{
+    display: flex;
+    height: 50px;
+    border: 1px solid rgb(108, 65, 118);
+    box-shadow: 2px 2px 10px rgb(82, 169, 147);
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+.search{
+    height: 25px;
+    width: 25px;
+    margin:15px; 
+    color: rgb(82, 87, 91);
+}
+.valdiv{
+    margin-top: 30px;
+    margin-left: 6%;
+}
+.values, .activelink{
+    color: white;
+    font-size: 25px;
+    color: rgb(77, 35, 87);
+    text-decoration: none;
+    margin-right: 30px;
+    font-weight: 700;
+}
+.values:hover{
+    color: rgb(32, 10, 32);
+    text-decoration: underline;
+}
+.activelink{
+    color: rgb(222, 13, 13);
+    text-decoration: none;
+}
