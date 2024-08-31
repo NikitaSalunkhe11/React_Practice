@@ -21,7 +21,7 @@
 }
 
 .searchbar{
-    margin: 1% 0% 0% 15%;
+    margin: 1% 0% 0% 10%;
     height: 40px;
 }
 .inputdiv{
@@ -41,15 +41,16 @@
 .searchbar{
     display: flex;
     height: 50px;
-    border: 1px solid rgb(108, 65, 118);
+    /* border: 1px solid rgb(192, 134, 205); */
     box-shadow: 2px 2px 10px rgb(82, 169, 147);
     border-radius: 30px;
     margin-bottom: 30px;
+    text-align: center;
 }
 .search{
     height: 25px;
     width: 25px;
-    margin:15px; 
+    margin:14px; 
     color: rgb(82, 87, 91);
 }
 .valdiv{

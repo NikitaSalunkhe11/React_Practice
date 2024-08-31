@@ -1,18 +1,31 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+
 const cardslice=createSlice({
     name:"card",
     initialState:{
         productData:[],
     },
     reducers:{
-        addToCard(state,action){//addToCard is the Name of Action
-            const userData=action.payload;// we recevied the userdata by using action.payload property
-            state.productData.push(userData);//We are trying to add the data into the productData Array so that the array elemnets are push and the action can be performed as well as the state can be increases
+        addToCard(state,action){
+            const userData= action.payload;
+            state.productData.push(userData);
+            console.log(userData);
+        },
+        emptyData(state,action){
+            state.productData=[];
+        },
+        removeProduct(state, action){
+            const id=action.payload;
+            state.productData = state.productData.filter(product => product.id !== id);
         }
     }
 })
-//Exporting the action i.e. addToCard
-const {addToCard} = cardslice.actions;
-//Exporting Reducer
+
+//exporting actions
+export const {addToCard}=cardslice.actions;
+export const { emptyData}=cardslice.actions;
+export const {removeProduct}=cardslice.actions;
+
+//exporting reducer
 export default cardslice.reducer;

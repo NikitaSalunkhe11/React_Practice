@@ -9,7 +9,7 @@ import Pages from "./Pages";
 
 function App(){
 
-  const url="https://fakestoreapi.com/products";
+  const url="https://freetestapi.com/api/v1/destinations";
 
   const [currentpage, setcurrentpage] = useState(1);
   const [productData, setProductData] = useState([]);

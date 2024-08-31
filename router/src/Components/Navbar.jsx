@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './navbarstyle.css';
 
+ 
 
 function Navbar() {
   return (
@@ -28,13 +29,14 @@ function Navbar() {
             >Home</NavLink>
 
             <NavLink 
-            to='/signup' 
+            to='/destination'
             className={({isActive})=>(isActive ? 'activelink' : 'values')} 
             id="val"
-            >Signup</NavLink>
-            <NavLink to="/login" className={({isActive})=>(isActive ? 'activelink' : 'values')} >Login</NavLink>
-            <NavLink to='/about' className={({isActive})=>(isActive ? 'activelink' : 'values')} >About Us</NavLink>
-            <NavLink to='/contact' className={({isActive})=>(isActive ? 'activelink' : 'values')} >Contact</NavLink>
+            >Destination</NavLink>
+            <NavLink to="/signup" className={({isActive})=>(isActive ? 'activelink' : 'values')} >SignUp</NavLink>
+            <NavLink to='/login' className={({isActive})=>(isActive ? 'activelink' : 'values')} >Login</NavLink>
+            <NavLink to='/about' className={({isActive})=>(isActive ? 'activelink' : 'values')} >About</NavLink>
+            <NavLink to='/addcard' className={({isActive}) => (isActive ? 'activelink': 'values')}>AddCard</NavLink>
           </div>
 
         </div>

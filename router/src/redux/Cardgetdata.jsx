@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { emptyData, removeProduct } from './cardslice';
 
@@ -9,7 +9,7 @@ function Cardgetdata() {
   const removeProductdispatch = useDispatch(); 
 
   const storeData = useSelector(state => {
-    console.log(state); // This should log the entire Redux state
+    console.log(state); 
     return state.card.productData;
 });
     console.log(storeData); 

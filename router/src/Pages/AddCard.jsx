@@ -1,15 +1,14 @@
-import React from 'react'
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { emptyData, removeProduct } from './cardslice';
+import { emptyData, removeProduct } from '../redux/cardslice';
 
-
-function Cardgetdata() {
+function AddCard() {
 
   const removedispatch=useDispatch();
   const removeProductdispatch = useDispatch(); 
 
   const storeData = useSelector(state => {
-    console.log(state); // This should log the entire Redux state
+    console.log(state); 
     return state.card.productData;
 });
     console.log(storeData); 
@@ -24,7 +23,7 @@ function Cardgetdata() {
               alignContent:"center",
               alignSelf:"center",
               justifyItems:"center",
-              borderRadius:"20px"
+              borderRadius:"20px",
             }} onClick={()=>removedispatch(emptyData())}>Empty Card</button>
 
             <div style={{display:"grid", gridTemplateColumns:"2fr 2fr 2fr",flexDirection:"row",}}>
@@ -42,4 +41,4 @@ function Cardgetdata() {
     </div>
   )
 }
-export default Cardgetdata;
+export default AddCard;

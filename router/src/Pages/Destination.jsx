@@ -1,11 +1,16 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { addToCard } from './redux/cardslice';
-import './style.css';
+import './Destinationstyle.css';
+import { addToCard } from '../redux/cardslice';
+import Pages from './Pages';
 
-function Product({ productData }) {
+
+function Destination({filteredProductData}) {
+
+  console.log({filteredProductData})
   const dispatch = useDispatch();
 
+  console.log(`product Data : ${filteredProductData}`);
   const handleOnClick = (item) => {
     dispatch(addToCard(item));
     alert(`${item.title} Product Added Successfully!!!`);
@@ -13,9 +18,9 @@ function Product({ productData }) {
 
   return (
     <div>
-      <h1 style={{ textAlign: "center" }}>Products</h1>
+      {/* <h1 style={{ textAlign: "center" }}>Products</h1> */} 
       <div className="Main">
-        {productData.map((item) => (
+        {filteredProductData.map((item) => (
           <div key={item.id} className="Product1">
             <h3>{item.name}</h3>
             <img src={item.image} className="ProductImage" alt="" />
@@ -38,15 +43,15 @@ function Product({ productData }) {
                 marginTop: "10px",
                 borderRadius: "20px",
               }}
-              onClick={() => handleOnClick(item)}  // Pass the function reference here
+              onClick={() => handleOnClick(item)} 
             >
               Add To Card
             </button>
           </div>
         ))}
       </div>
+      <Pages></Pages>
     </div>
   );
 }
-
-export default Product;
+export default Destination;
