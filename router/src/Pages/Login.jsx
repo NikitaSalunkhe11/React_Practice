@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import './login.css';
+import { NavLink } from 'react-router-dom';
 
 function Login() {
 
@@ -73,7 +74,10 @@ function Login() {
           <div>
             <button type='submit' className='button' >Submit</button>
           </div>
-
+           <div className='signup'>
+          <NavLink style={{fontSize:"18px", color:"white", textDecoration:"underline", marginTop:"20px"}}
+          to="/signup"  >Signup or create account</NavLink>
+          </div> 
         </form>
         </div>
       </div>

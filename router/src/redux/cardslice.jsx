@@ -18,7 +18,7 @@ const cardslice=createSlice({
         removeProduct(state, action){
             const id=action.payload;
             state.productData = state.productData.filter(product => product.id !== id);
-        }
+        },
     }
 })
 

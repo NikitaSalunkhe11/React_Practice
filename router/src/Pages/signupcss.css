@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 .outerdiv{
-    
     display: grid;
     margin: auto auto;
     margin-top: 30px;

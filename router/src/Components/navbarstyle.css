@@ -8,11 +8,12 @@
     height: 80px;
     /* background-color: rgb(111, 161, 232); */
     width: 100%;
+    position: inherit;
 }
 
 .namediv{
     margin-top: 10px;
-    padding-left: 50px;
+    padding-left: 80px;
     color: rgb(77, 35, 87);
     text-shadow: 10px 10px 20px rgb(168, 67, 146);
     font-size: 50px;
@@ -25,7 +26,7 @@
     height: 40px;
 }
 .inputdiv{
-    width: 400px;
+    width: 300px;
     height: 50px;
 }
 .inputval{
@@ -42,7 +43,7 @@
     display: flex;
     height: 50px;
     /* border: 1px solid rgb(192, 134, 205); */
-    box-shadow: 2px 2px 10px rgb(82, 169, 147);
+    box-shadow: 2px 2px 6px rgb(114, 37, 104);
     border-radius: 30px;
     margin-bottom: 30px;
     text-align: center;
@@ -54,15 +55,16 @@
     color: rgb(82, 87, 91);
 }
 .valdiv{
-    margin-top: 30px;
-    margin-left: 6%;
+    display: flex;
+    margin-left: 45%;
 }
 .values, .activelink{
+    margin-top: 30px;
     color: white;
     font-size: 25px;
     color: rgb(77, 35, 87);
     text-decoration: none;
-    margin-right: 30px;
+    margin-right: 50px;
     font-weight: 700;
 }
 .values:hover{
@@ -72,4 +74,78 @@
 .activelink{
     color: rgb(222, 13, 13);
     text-decoration: none;
+}
+.dropdown {
+    margin-top: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #5b95ae;
+    min-width: 160px;
+    z-index: 1;
+}
+#subval{
+    margin-left: 160px;
+}
+.dropdown-content .dropdown-link {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.dropdown-content .dropdown-link:hover {
+    background-color: #f0d9f4;
+    color: black; 
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content:hover .subdropdown-content{
+    background-color: black;
+    margin-left: 200px;
+}
+.subdropdown-content{
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #5b95ae;
+    min-width: 160px;
+    z-index: 1;
+}
+.subdropdown-content .dropdown-link1 {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.subdropdown-content .dropdown-link1:hover {
+    background-color: #f0d9f4;
+    color: black; 
+}
+
+.dropdown-content .subdropdown-content {
+    display: block;
+}
+.dropdown-content:hover .subdropdown-content{
+    background-color: black;
+    margin-left: 200px;
+}
+.addtocarddiv{
+    display: flex;
+    margin: 0px;
+}
+.addtocardlogo{
+    margin-top: 15px;
+    height: 60px;
+    width:60px;
+    margin-left: 10px;
 }

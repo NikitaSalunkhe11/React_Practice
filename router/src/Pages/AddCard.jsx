@@ -16,9 +16,9 @@ function AddCard() {
   return (
     <div>
         <div>
-            <h3 style={{fontSize:"30px", textAlign:"center"}}>Count of Product is : {storeData.length}</h3>
+            <h3 style={{fontSize:"30px", textAlign:"center", marginTop:"30px"}}>Your Visiting Places count : {storeData.length}</h3>
             <button style={{
-              marginLeft:"700px",
+              marginLeft:"800px",
               backgroundColor:"skyblue", textAlign:"center", alignItems:"center", fontSize:"15px", fontWeight:"600", border:"none", padding:"10px 20px 10px 20px", marginTop:"10px",
               alignContent:"center",
               alignSelf:"center",
@@ -33,7 +33,7 @@ function AddCard() {
                 <p style={{color:"red", fontSize:"20px", margin:"20px"}}>{product.country}</p>
                 <button 
                 style={{marginLeft:"50px", height:"30px", width:"150px", backgroundColor:"lightgreen", margin:"20px"}} 
-                onClick={()=>removeProductdispatch(removeProduct(product.id))}>Remove Country</button>
+                onClick={()=>removeProductdispatch(removeProduct(product.id))}>Remove Place</button>
               </div>
             ))}
             </div>
