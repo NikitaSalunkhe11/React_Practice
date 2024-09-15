@@ -10,7 +10,7 @@ function App() {
   const [color, setColor] = useState("orange");
   return (
     <div style={{alignItems:'center'}}>
-      <UseMemo />
+      <UseMemo /> 
       <UseReducer />
       <UseState />
       <globalInfo.Provider value={{color:color}}>
